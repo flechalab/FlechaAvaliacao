@@ -1,0 +1,20 @@
+#header {
+    padding: 10px 0;
+    color: #FFF;
+    background-color: #222;
+    background-image: -moz-linear-gradient(center top , #333333, #222222);
+    background-repeat: repeat-x;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+    font-size: 26px;
+}
+
+.overview {
+    height: 80px;
+    background-color: #049CD9;
+    background-image: -moz-linear-gradient(#004D9F, #049CD9);
+}
+
+#sidebar {
+    width: 940px;
+    margin: 0 auto;
+}
