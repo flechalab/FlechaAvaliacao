@@ -1,0 +1,6 @@
+[submodule "protected/extensions/vendors/php"]
+	path = protected/extensions/vendors/php
+	url = https://github.com/facebook/facebook-php-sdk.git
+[submodule "protected/extensions/vendors/facebook-php-sdk"]
+	path = protected/extensions/vendors/facebook-php-sdk
+	url = https://github.com/facebook/facebook-php-sdk.git
