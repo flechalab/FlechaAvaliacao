@@ -4,3 +4,6 @@
 [submodule "protected/extensions/vendors/facebook-php-sdk"]
 	path = protected/extensions/vendors/facebook-php-sdk
 	url = https://github.com/facebook/facebook-php-sdk.git
+[submodule "protected/extensions/vendors/twitter-bootstrap"]
+	path = protected/extensions/vendors/twitter-bootstrap
+	url = https://github.com/twitter/bootstrap.git
