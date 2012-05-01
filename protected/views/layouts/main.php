@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
@@ -25,18 +25,17 @@
 <body>
 
 <div id="page">
-
 	<div id="header">
 	    <div class="container">
     		<div id="logo"><a href="/"><?php echo CHtml::encode(Yii::app()->name); ?></a></div>
-    		
             <section id="login">
                 <?php
                 if ( Yii::app()->user->isGuest ) {
                     ?>
-                    <a href="<?php echo Yii::app()->params['facebookLoginUrl'] ?>">Conecte usando sua conta do Facebook</a>
-                    ou
-                    <a href="/?r=site/login">Faça login no nosso sistema</a>
+                    Conecte via 
+                    <a href="<?php echo Yii::app()->params['facebookLoginUrl'] ?>">Facebook</a>
+                    ou Faça o
+                    <a href="/?r=site/login">Login</a>
                     <?php
                 } else {
                     ?>
@@ -45,25 +44,55 @@
                 }
                 ?>
             </section>
-            
     	</div>
 	</div><!-- header -->
     
-	<!-- mainmenu -->
-	<div class="container">
+	<div class="container clear">
     	<?php echo $content; ?>
 	</div>
 
-	<div class="clear"></div>
-
+    <div class="modal" id="myModal">
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>Avalie seu Banco</h3>
+        </div>
+        <div class="modal-body">
+            <p>Ops!</p>
+        </div>
+    </div>
+        <!--
+        <div class="modal-footer">
+            <a href="#" class="btn">Close</a>
+        </div>
+        -->
+    
     <footer id="footer">
         <div class="container">
-		    &copy; <?php echo date('Y'); ?> Flechaweb<br/>
-	    	<?php echo Yii::powered(); ?>
+            <div class="pull-right">
+                Flechaweb (<?php echo date('Y'); ?>) - 
+                <?php echo Yii::powered(); ?>
+            </div>            
         </div>
-   	</footer><!-- footer -->
-   	
+   	</footer>
 </div><!-- page -->
+
+<!--
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("jquery", "1.7.1");</script>
+-->
+<script type="text/javascript" src="/js/jQuery.min.js"></script>
+
+<script>
+    if ( typeof jQuery == 'undefined' ) {
+        //document.write('<script type="text/javascript" src="/js/jquery.min.js"><\/script>');
+    }
+    if ( typeof jQuery == 'undefined' ) {
+        console.log('jQuery yet not loaded');
+    }
+</script>
+
+<script type="text/javascript" src="/js/functions.js?id=<?php echo uniqid(); ?>"></script>
+<script type="text/javascript" src="/js/bootstrap-modal.js"></script>
 
 </body>
 </html>
